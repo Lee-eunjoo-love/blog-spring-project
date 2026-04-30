@@ -9,7 +9,7 @@ version = "0.0.1-SNAPSHOT"
 
 java {
 	toolchain {
-		languageVersion = JavaLanguageVersion.of(21)
+		languageVersion = JavaLanguageVersion.of(17)
 	}
 }
 
@@ -17,25 +17,11 @@ repositories {
 	mavenCentral()
 }
 
-//extra["springAiVersion"] = "1.0.0"
-
 dependencies {
 	//#. 공통
 	implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
-	implementation("org.springframework.boot:spring-boot-starter-webflux")
 	implementation("org.springframework.boot:spring-boot-starter-web")
-	compileOnly("org.projectlombok:lombok")
-	annotationProcessor("org.projectlombok:lombok")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
-	testCompileOnly("org.projectlombok:lombok")
-	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
-	testAnnotationProcessor("org.projectlombok:lombok")
-}
-
-dependencyManagement {
-	//imports {
-	//	mavenBom("org.springframework.ai:spring-ai-bom:${property("springAiVersion")}")
-	//}
 }
 
 tasks.withType<Test> {
