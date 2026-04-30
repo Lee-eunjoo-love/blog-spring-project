@@ -17,7 +17,7 @@ repositories {
 	mavenCentral()
 }
 
-extra["springAiVersion"] = "1.0.0"
+//extra["springAiVersion"] = "1.0.0"
 
 dependencies {
 	//#. 공통
@@ -33,9 +33,9 @@ dependencies {
 }
 
 dependencyManagement {
-	imports {
-		mavenBom("org.springframework.ai:spring-ai-bom:${property("springAiVersion")}")
-	}
+	//imports {
+	//	mavenBom("org.springframework.ai:spring-ai-bom:${property("springAiVersion")}")
+	//}
 }
 
 tasks.withType<Test> {
